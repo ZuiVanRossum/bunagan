@@ -1,0 +1,337 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+.elogo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-left:30px;
+    opacity:0.8;
+    border:1.5px solid goldenrod;
+}
+.allback{
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(img/logo.jpg);
+    background-size:cover;
+    background-position:center;
+    padding-bottom:80px;
+}
+.logo{
+    width:120px;
+    cursor:pointer;
+    color:lemonchiffon;
+    font-weight:bold;
+    font-size: xx-large;
+    margin-bottom:-90px;
+    margin-left:30px;
+ }
+.logo:hover{
+    color:goldenrod;
+}
+.headban{
+    width:100%;
+    height:100vh;
+}
+.navbar{
+    width:85%;
+    margin:auto;
+    padding:35px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+}
+.navbar ul li a{
+    text-decoration:none;
+    color:lemonchiffon;
+    text-transform:uppercase;
+    font-weight: bolder;
+    font-size:large ;
+}
+.navbar ul li::after{
+    content:"";
+    height:3px;
+    width:0;
+    background:darkkhaki;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    transition:0.5s;
+}
+.navbar ul li:hover:after{
+    width:100%;
+}
+.gallery{
+    padding-top:10px;
+}
+
+.gallery input{
+    display:none;
+}
+.gallery .gallery-container{
+    width:100%;
+    text-align:center;
+}
+
+.gallery h1{
+    font-weight:normal;
+    position:relative;
+    font-size:35px;
+    margin:40px 0;
+    color: goldenrod;
+}
+
+.gallery h1::before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:3px;
+    background-color:lemonchiffon;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    animation:animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width:100px;
+    }
+    50%{
+        width:200px;
+    }
+    100%{
+        width:100px;
+    }
+}
+
+
+.gallery .top-content{
+    background-color:lightgrey;
+    width:90%;
+    margin:0 auto 20px auto;
+    height:60px;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    box-shadow:3px 3px 5px lightgrey;
+}
+
+.gallery h3{
+    height:100%;
+    line-height:60px;
+    padding:0 50px;
+    background-color:lightgrey;
+    color:#252B48; 
+
+
+}
+
+.gallery label{
+    display:inline-block;
+    height:100%;
+    margin:0 20px;
+    line-height:60px;
+    font-size:18px;
+    color:black;
+    cursor:pointer;
+    transition:color .5s;
+}
+
+.gallery label:hover{
+    color:goldenrod;
+}
+
+
+.gallery .photo-gallery{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap:20px;
+}
+
+.gallery .pic{
+    position:relative;
+    height:230px;
+    border-radius:5px;
+    box-shadow:5px 5px 10px lemonchiffon;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.gallery .pic img{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    transition:.5s;
+}
+
+.gallery .pic::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:goldenrod;
+    font-size:22px;
+    font-weight:bold;
+    width:100%;
+    margin-top:-100px;
+    opacity:0;
+    transform:.3s;
+    transition-delay:.2s;
+    z-index:1;
+}
+
+
+.gallery .pic::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    border-radius:10px;
+    width:100%;
+    height:0;
+    background-color:lemonchiffon;
+    opacity:0.3;
+    transition:.3s;
+}
+
+.gallery .pic:hover::after{
+    height:100%;
+}
+
+
+.gallery .pic:hover::before{
+    margin-top:0;
+    opacity:1;
+}
+
+.gallery #check1:checked~ .gallery-container .photo-gallery .pic{
+    opacity:1;
+    transform:scale(1);
+    position:relative;
+    transition:.5s;
+
+}
+
+.gallery #check2:checked~ .gallery-container .photo-gallery .Events{
+    opacity:1;
+    transform:scale(1);
+    position:relative;
+
+}
+
+.gallery #check2:checked~ .gallery-container .photo-gallery .Bonding,
+.gallery #check2:checked~ .gallery-container .photo-gallery .Outing{
+    opacity:1;
+    transform:scale(0);
+    position:absolute;
+    transition:0s;
+}
+
+
+
+.gallery #check3:checked~ .gallery-container .photo-gallery .Bonding{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+
+}
+
+.gallery #check3:checked~ .gallery-container .photo-gallery .Events,
+.gallery #check3:checked~ .gallery-container .photo-gallery .Outing{
+    opacity:1;
+    transform:scale(0);
+    position:absolute;
+    transition:0s;
+}
+
+
+.gallery #check4:checked~ .gallery-container .photo-gallery .Bonding{
+    opacity:1;
+    transform:scale(1);
+    position:relative;
+
+}
+
+.gallery #check4:checked~ .gallery-container .photo-gallery .Events,
+.gallery #check4:checked~ .gallery-container .photo-gallery .Bonding{
+    opacity:1;
+    transform:scale(0);
+    position:absolute;
+    transition:0s;
+}
+
+@media screen and(max-width:992px){
+
+    .gallery .photo-gallery{
+        width:90%;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-gap:20px;
+    }
+}
+
+@media screen and(max-width:768px){
+
+
+    .gallery h1{
+        font-weight:normal;
+        position:relative;
+        font-size:28px;
+        margin:40px 0;
+    }
+
+
+    .gallery h3{
+        display:none;
+    }
+
+    .gallery label{
+        height:100%;
+        font-size:11px;
+        color:gray;
+        cursor:pointer;
+        transition:color .5s;
+    }
+
+    .gallery label:hover{
+        color:black;
+    }
+
+    .gallery .photo-gallery{
+        width:80%;
+        margin:auto;
+        display:grid;
+        grid-template-columns:1fr;
+        
+    }
+}
+
+.footer-basic{
+      color: goldenrod;
+      text-align:center;
+      padding-top: 10px;
+ }
+  .footer-basic .social{
+      text-align: center;
+  }
+  .footer-basic .social a{
+    font-size: 60px;
+    color: lemonchiffon;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 8px;
+    padding-top:250px;
+  }

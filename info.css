@@ -1,0 +1,211 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 40px;
+  padding: 0 8px;
+  
+}
+.column img{
+    width:100%;
+    height:450px;
+    border-radius:5%;
+    opacity:1;
+}
+.row{
+    color:lemonchiffon;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 black;
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color:lemonchiffon;
+}
+.about-section h1{
+    font-size:40px;
+    color: goldenrod;
+}
+.h2ni h2{
+    color: goldenrod;
+    font-size:50px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: gold;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: goldenrod;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+.allback{
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(img/logo.jpg);
+    background-size:color;
+    background-position:center;
+    padding-bottom:7px;
+}
+.logo{
+    width:120px;
+    cursor:pointer;
+    color:lemonchiffon;
+    font-weight:bold;
+    font-size: xx-large;
+    margin-bottom:-90px;
+    margin-left:30px;
+ }
+.logo:hover{
+    color:goldenrod;
+}
+.headban{
+    width:100%;
+    height:100vh;
+}
+.navbar{
+    width:85%;
+    margin:auto;
+    padding:35px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+}
+.navbar ul li a{
+    text-decoration:none;
+    color:lemonchiffon;
+    text-transform:uppercase;
+    font-weight: bolder;
+}
+.navbar ul li::after{
+    content:"";
+    height:3px;
+    width:0;
+    background:goldenrod;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    transition:0.5s;
+}
+.navbar ul li:hover:after{
+    width:100%;
+}
+
+.fontcontent{
+    text-align:center;
+    color:#75C2F6;
+    margin-top:-700px;
+    margin-left:550px;
+    font-size:20px;
+}
+.fontcontent h1{
+    font-size:50px;
+    color:#75C2F6;
+}    
+.elogo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-left:30px;
+    opacity:0.8;
+    border:1.5px solid goldenrod;
+}
+
+span{
+    background:rgb(244, 80, 80);
+    height:100%;
+    width:0%;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:-1;
+    transition:0.5s;
+}
+
+
+button:hover span{
+    width:100%;
+}
+button:hover{
+    border:none;
+}
+
+
+.footer-basic{
+      color:goldenrod;
+      margin-right: 200px;
+      margin-top:-100px;
+
+  }
+  .footer-basic .social{
+      text-align: center;
+      padding-left: 180px;
+  }
+  .footer-basic .social a{
+    font-size: 50px;
+    color:lemonchiffon;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0 10px;      
+  }
+  .footer-basic p{
+    padding-left:180px;
+    text-align:center;
+}
